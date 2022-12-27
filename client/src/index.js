@@ -6,7 +6,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 
 import {BrowserRouter, Route, Routes} from "react-router-dom";
-import Header from './Header';
 import HomePage from './HomePage';
 
 import reportWebVitals from './reportWebVitals';
@@ -14,12 +13,9 @@ import reportWebVitals from './reportWebVitals';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
-
-    <Header/>
     <Routes>
 
       <Route path="/" element={<HomePage/>} />
-
 
     </Routes>
 

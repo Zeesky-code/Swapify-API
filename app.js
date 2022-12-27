@@ -1,11 +1,19 @@
-import express from 'express';
-import cors from 'cors';
+const express = require('express')
+const cors = require('cors')
+const bodyParser = require('body-parser')
+
+require('dotenv').config()
+
+const searchRouter = require('./routes/search.route')
 
 const app = express();
 
-app.use(express.urlencoded({extended: false}));
+const PORT = 9000 
+
+app.use(bodyParser.urlencoded({extended:false}))
 app.use(express.json());
 app.use(cors());
+
 
 app.get('/', (req,res)=>{
     res.status(200).json({
@@ -14,8 +22,7 @@ app.get('/', (req,res)=>{
     })
 })
 
-
-const PORT = 9000 
+app.use('/search', searchRouter)
 
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`)
