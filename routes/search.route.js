@@ -4,6 +4,6 @@ const searchController = require('../controllers/search.controller');
 
 const searchRouter = express.Router()
 
-searchRouter.get('/', searchController.getSpotifyLink)
+searchRouter.post('/', searchController.getSpotifyLink)
 
 module.exports = searchRouter
