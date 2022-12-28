@@ -18,7 +18,6 @@ function Home() {
             (res) => res.json())
         .then((data) => {
             setResponse(data.link);
-            console.log(response)
         });
     };
 
