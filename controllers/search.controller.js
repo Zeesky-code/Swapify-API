@@ -21,7 +21,7 @@ async function getSpotifyLink(req,res){
         // do something with data
         res.status(200).json({
             "Song Title: ": title,
-            "Spotify Link": data.tracks.items[0].external_urls
+            "Spotify Link": data.tracks.items[0].external_urls.spotify
         })
     })
 

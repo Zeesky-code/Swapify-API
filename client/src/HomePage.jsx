@@ -2,6 +2,10 @@ import { Link } from "react-router-dom"
 import React from 'react';
 import './homePage.css';
 
+function NavBar(){
+    return
+}
+
 function SignUpButton(){
     return <Link to="/signup" className="nav-link">
         <button className="btn btn-primary" >
@@ -43,8 +47,7 @@ function LandingFrameMessage() {
 
                 <div className="header">
                     <h1>Swapify</h1>
-                    <h3>Music Anywhere, Anyhow</h3>
-                    <img src="/icon.png"/>
+
                 </div>
 
                 <div style={{ "fontSize": "36px" }}>
