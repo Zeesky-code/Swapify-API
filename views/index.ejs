@@ -1,0 +1,10 @@
+<%- include('partials/header') %>
+
+<p>Hello, Welcome to the <%= name %></p>
+<form action="/search" method="post" enctype="multipart/form-data">
+    <input type="file" name="avatar" />
+    <input type ="text" name ="url"/>
+    <input type="submit"/>
+</form>
+
+<%- include('partials/footer') %>

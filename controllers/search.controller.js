@@ -19,10 +19,12 @@ async function getSpotifyLink(req,res){
     client.search(params)
     .then(data => {
         // do something with data
-        res.status(200).json({
-            "title: ": title,
-            "link": data.tracks.items[0].external_urls.spotify
-        })
+        res.render('result', {
+            title: title,
+            link: data.tracks.items[0].external_urls.spotify,
+            file: req.file
+        });
+        
     })
 
 }

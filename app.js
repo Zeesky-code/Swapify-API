@@ -14,13 +14,18 @@ app.use(bodyParser.urlencoded({extended:false}))
 app.use(express.json());
 app.use(cors());
 
+app.set("view engine", "ejs");
+app.set("views", "views");
 
-app.get('/', (req,res)=>{
-    res.status(200).json({
-        status: "true",
-        message: "Welcome to Swapify"
-    })
-})
+// app.get('/', (req,res)=>{
+//     res.status(200).json({
+//         status: "true",
+//         message: "Welcome to Swapify"
+//     })
+// })
+app.get('/', (req, res) => {
+    res.render('index', { name: 'Swapify' });
+});
 
 app.use('/search', searchRouter)
 
